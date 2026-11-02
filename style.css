@@ -1,0 +1,156 @@
+/* The app's own colours: paper, ink and the yellow accent. */
+:root {
+  --paper: #FFF6E9;
+  --card: #FFFFFF;
+  --ink: #1D1A33;
+  --muted: #6B6580;
+  --accent: #FFC53D;
+  --link: #2563EB;
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #15131F;
+    --card: #221F33;
+    --ink: #F4F1FA;
+    --muted: #B3ADC7;
+    --link: #7AA7FF;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 17px/1.55 ui-rounded, "SF Pro Rounded", system-ui, -apple-system, sans-serif;
+}
+
+main {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 32px 16px 64px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+header img {
+  width: 56px;
+  height: 56px;
+  border-radius: 13px;
+  border: 3px solid #1D1A33;
+}
+
+header a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.eyebrow {
+  display: block;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.name {
+  display: block;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: 34px;
+  font-weight: 900;
+  line-height: 1.15;
+  margin: 0 0 8px;
+}
+
+h2 {
+  font-size: 21px;
+  font-weight: 900;
+  margin: 32px 0 8px;
+}
+
+p, li { margin: 0 0 12px; }
+
+a { color: var(--link); }
+
+.updated {
+  color: var(--muted);
+  font-size: 15px;
+  margin-bottom: 24px;
+}
+
+.card {
+  background: var(--card);
+  border: 3px solid #1D1A33;
+  border-radius: 22px;
+  box-shadow: 0 4px 0 #1D1A33;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.card p:last-child, .card ul:last-child { margin-bottom: 0; }
+
+.hero {
+  text-align: center;
+  padding: 24px 0 8px;
+}
+
+.hero img {
+  width: 128px;
+  height: 128px;
+  border-radius: 29px;
+  border: 3px solid #1D1A33;
+  box-shadow: 0 6px 0 #1D1A33;
+}
+
+.hero h1 { margin-top: 24px; }
+
+.tagline {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--muted);
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 28px;
+}
+
+.button {
+  display: inline-block;
+  background: var(--accent);
+  color: #1D1A33;
+  font-weight: 900;
+  text-decoration: none;
+  padding: 12px 22px;
+  border: 3px solid #1D1A33;
+  border-radius: 16px;
+  box-shadow: 0 4px 0 #1D1A33;
+}
+
+.button.plain { background: var(--card); color: var(--ink); }
+
+footer {
+  margin-top: 48px;
+  color: var(--muted);
+  font-size: 15px;
+  text-align: center;
+}
+
+footer a { color: inherit; }
